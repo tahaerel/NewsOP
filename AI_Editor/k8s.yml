@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: newsop
+spec:
+  selector:
+    matchLabels:
+      app: newsop
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: newsop
+    spec:
+      containers:
+      - name: newsop
+        image: ghcr.io/pagebrain/newsop
+        resources:
+          requests:
+            cpu: 1m
+        env:
+        - name: OPENAI_API_KEY
+          value: ***
+        - name: ENV
+          value: production
+        livenessProbe:
+          httpGet:
+            path: /newsop/api/healthz
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          timeoutSeconds: 5
+          successThreshold: 1
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /newsop/api/healthz
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          timeoutSeconds: 5
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: newsop
+  name: newsop
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: newsop
