@@ -1,0 +1,151 @@
+.__meeper_button_reset {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  text-align: inherit;
+  font: inherit;
+  border-radius: 0;
+  appearance: none;
+  cursor: pointer;
+}
+
+.__meeper_button {
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center center;
+  width: 2.75rem;
+  height: 2.5rem;
+  margin-right: 0.25rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0.75;
+}
+
+.__meeper_button:hover,
+.__meeper_button:focus {
+  border: none;
+  outline: none;
+  opacity: 1;
+}
+
+.__meeper_tooltip {
+  white-space: normal;
+  text-align: left;
+  width: 170px;
+  background: rgba(0, 0, 0, 0.85);
+  color: rgba(255, 255, 255, 0.9);
+  padding: 10px 16px;
+  border-radius: 8px;
+  z-index: 99999;
+  font-size: 14px;
+}
+
+.__meeper_kbd {
+  --bc: 220 13% 69%;
+  --b2: 213 18% 12%;
+  --tw-border-opacity: 0.2;
+  --tw-bg-opacity: 1;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 1px;
+  border-style: solid;
+  border-color: hsl(var(--bc) / var(--tw-border-opacity));
+  background-color: hsl(var(--b2) / var(--tw-bg-opacity));
+  border-radius: 0.4rem;
+  border-bottom-width: 2px;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  min-height: 1.6em;
+  min-width: 1.6em;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.__meeper_hide_button {
+  margin: 0 auto;
+  font-size: 12px;
+  text-decoration: underline;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+}
+
+/* Spinner */
+
+.rw_spinner__container {
+  display: flex;
+  justify-content: space-between;
+  height: var(--boxHeight, 16px);
+  --boxSize: 2px;
+  --gutter: 1px;
+  width: calc((var(--boxSize) + var(--gutter)) * 5);
+}
+
+.rw_spinner {
+  transform: scaleY(0.4);
+  height: 100%;
+  width: var(--boxSize);
+  background: var(--boxBg, hsl(var(--muted-foreground)));
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  border-radius: 8px;
+}
+
+.rw_spinner__1 {
+  animation-name: quiet;
+}
+
+.rw_spinner__2 {
+  animation-name: normal;
+}
+
+.rw_spinner__3 {
+  animation-name: quiet;
+}
+
+.rw_spinner__4 {
+  animation-name: loud;
+}
+
+.rw_spinner__5 {
+  animation-name: quiet;
+}
+
+@keyframes quiet {
+  25% {
+    transform: scaleY(0.6);
+  }
+  50% {
+    transform: scaleY(0.4);
+  }
+  75% {
+    transform: scaleY(0.8);
+  }
+}
+
+@keyframes normal {
+  25% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.4);
+  }
+  75% {
+    transform: scaleY(0.6);
+  }
+}
+@keyframes loud {
+  25% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.4);
+  }
+  75% {
+    transform: scaleY(1.2);
+  }
+}

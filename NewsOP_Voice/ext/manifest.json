@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "version": "0.5.2",
+  "name": "NewsOP - Röportajlar İçin Yapay Zeka",
+  "short_name": "NewsOP",
+  "description": "Toplantılar ve herhangi bir tarayıcı sekmesi için ChatGPT ve Whisper AI kullanarak transkripsiyonlar, özet ve daha fazlası.",
+  "background": {
+    "service_worker": "assets/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://meet.google.com/*-*-*"],
+      "js": ["assets/content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_title": "NewsOP",
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+9",
+        "mac": "Command+Shift+9"
+      }
+    },
+    "run-meeper": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+0",
+        "mac": "Command+Shift+0"
+      },
+      "description": "Geçerli sayfada NewsOP'u çalıştırın."
+    }
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'self';"
+  },
+  "host_permissions": ["*://meet.google.com/*-*-*"],
+  "optional_host_permissions": ["*://*/*", "<all_urls>"],
+  "default_locale": "en",
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-128.png",
+    "128": "icon-512.png"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage",
+    "scripting",
+    "tabCapture",
+    "contextMenus"
+  ]
+}
