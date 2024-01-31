@@ -43,7 +43,7 @@ export default async function handler(
       },
       method: 'POST',
       body: JSON.stringify({
-        model: "gpt-3.5-turbo-1106",
+        model: "ft:gpt-3.5-turbo-1106:personal::8n2oCykT",
         messages: [
           {
             role: 'system',
