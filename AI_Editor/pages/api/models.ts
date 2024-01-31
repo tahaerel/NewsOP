@@ -21,7 +21,7 @@ export default async function handler(req, res) {
 
 
     const models =  data.data.map((m)=>{
-        if (m.id === 'gpt-3.5-turbo-1106' || m.id === 'gpt-4') {
+        if (m.id === 'ft:gpt-3.5-turbo-1106:personal::8n2oCykT' || m.id === 'ft:gpt-3.5-turbo-1106:personal::8n2oCykT') {
             return m.id;
         }
     }).filter(Boolean);
