@@ -41,7 +41,7 @@ const openaiBaseUrl = process.env.OPENAI_BASE_URL || 'https://api.openai.com/v1'
       console.log("MESSAGES", messages)
 
     const payload = JSON.stringify({
-        model: "gpt-3.5-turbo-1106",
+        model: "ft:gpt-3.5-turbo-1106:personal::8n2oCykT",
         messages: messages,
         max_tokens: 500,
         temperature: parseFloat(temperature),
