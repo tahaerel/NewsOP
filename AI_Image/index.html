@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Görsel Yükleme ve İşleme</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Görsel Yükleme ve İşleme</h1>
+        <label for="imageInput" class="custom-file-upload">
+            Dosya Seç
+        </label>
+        <input type="file" id="imageInput" accept="image/*">
+        <button id="uploadButton">Blurla</button>
+        <button id="enhanceButton">İyileştir</button>
+        <div class="result-container">
+            <img id="resultImage" src="" alt="İşlenmiş Görsel">
+            <a id="downloadButton" href="#" download="islenmis_gorsel.png">İndir</a>
+        </div>
+    </div>
+    <div id="errorContainer" style="display:none;" class="error-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
