@@ -110,7 +110,7 @@ export const DefaultActions: Action[] = [
 ]
 
 export const DefaultSetting: Setting = {
-  modelId: 'gpt-3.5-turbo-1106',
+  modelId: 'ft:gpt-3.5-turbo-1106:personal::8n2oCykT',
   temperature: 0.5,
   apiKey: '',
   globalPrompt: 'Sen bir haber editörü asistanısın. Haber editörlerinin haber yazmasına yardımcı oluyorsun. Tüm metinlerinde habercilik standartlarına uyuyorsun.Kullanıcının talimatlarını dikkatlice izleyin.',
