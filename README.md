@@ -17,7 +17,7 @@ Localhost üzerinden başlatılarak erişim sağlanır.
 Yapay zeka tabanlı haber yazma editörüdür. Normal editörlerin aksine, AA datalarıyla fine-tune edilerek eğitilmiş chatgpt entegresine sahiptir. Metin bazlı birçok farklı işlevi yerine getirebilir ve işlevler kişiselleştirilebilir.
 
 ### Çalıştırma
-NodeJS + Typescript + OpenAi Api kullanılarak geliştirilmiştir.
+NodeJS + Typescript + OpenAi ChatGPT Api kullanılarak geliştirilmiştir.
 
 ```
 npm install
@@ -32,11 +32,38 @@ http://localhost:3000/newsop/editor sayfasından erişim sağlanır.
 
 ![image](https://github.com/tahaerel/NewsOP/assets/63150746/5e96b1d2-34ed-4d03-b2e0-b3581012bfd2)
 
+Ülke, haber kaynağı, tarih ve kelime filtremeleri yaparak birçok farklı kaynaktan haber araması yapmayı sağlar.  
+
+### Çalıştırma
 Html + css + js + NewsApi kullanılmıştır. 
 Dashboard içerisine gömülmüştür. Ayrı bir şekilde çalıştırmaya gerek kalmadan **Gündem Tarama** sekmesinden erişim sağlanılabilir.
 Api key projede test amaçlı bırakılmıştır. Dashboard dışında başlatmak için localhostta açmak yeterlidir.
 
 ## AI Voice
-Güncellenecek...
+
+![image](https://github.com/tahaerel/NewsOP/assets/63150746/ab3dec38-533a-4f3b-b180-b0476aaf4d62)
+
+Toplantıları, röportajları veya herhangi bir videoyu (canlı videolar dahil) sekme sesini dinleyerek metne dönüştürmeyi ve metinde işlemler yapmayı sağlayan bir tarayıcı eklentisidir. 
+
+### Çalıştırma
+NodeJS + Typescript + OpenAi ChatGPT ve Whisper AI Api kullanılarak geliştirilmiştir.
+```
+npm install
+npm run build
+1.Tarayıcınızdan eklenti ayarlarına gelin.
+2.Developer modunu aktif hale getirin.
+3.Paketlenmemiş öğe yükle butonuna basın.
+4.Proje konumundaki "ext" dosyasını seçin. 
+
+```
 ## AI Image
-Güncellenecek...
+
+![image](https://github.com/tahaerel/NewsOP/assets/63150746/719431bb-e1de-4a67-b6b2-857da94f350e)
+
+Yapay zeka kullanarak görsellerin çözünürlüğünü arttırma ve otomatik insan, araç plakası blurlama işlemlerini gerçekleştirir. 
+
+### Çalıştırma
+Html, css, js, RapidApi kullanılarak geliştirilmiştir. 
+Localhost üzerinden başlatılarak erişim sağlanır. 
+
+
