@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NewsOP, Yeni Nesil Haber Operasyonları">
+    <meta name="keywords" content="NewsOP, Haber, Editor, Kontrol Paneli">
+    <meta name="author" content="pixelstrap">
+    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+    <title>NewsOP</title>
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.css">
+    <!-- ico-font-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/icofont.css">
+    <!-- Themify icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/themify.css">
+    <!-- Flag icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/flag-icon.css">
+    <!-- Feather icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/feather-icon.css">
+    <!-- Plugins css start-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/slick.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/scrollbar.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/animate.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/select2.css">
+    <!-- Plugins css Ends-->
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/bootstrap.css">
+    <!-- App css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link id="color" rel="stylesheet" href="../assets/css/color-1.css" media="screen">
+    <!-- Responsive css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+  </head>
+  <body> 
+    <!-- loader starts-->
+    <div class="loader-wrapper">
+      <div class="loader-index"> <span></span></div>
+      <svg>
+        <defs></defs>
+        <filter id="goo">
+          <fegaussianblur in="SourceGraphic" stddeviation="11" result="blur"></fegaussianblur>
+          <fecolormatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo"> </fecolormatrix>
+        </filter>
+      </svg>
+    </div>
+   <!-- loader ends-->
+    <!-- tap on top starts-->
+    <div class="tap-top"><i data-feather="chevrons-up"></i></div>
+    <!-- tap on tap ends-->
+     <!-- page-wrapper Start-->
+  <div class="page-wrapper compact-wrapper" id="pageWrapper">
+    <!-- Page Header Start-->
+    <div class="page-header">
+      <div class="header-wrapper row m-0">
+        <form class="form-inline search-full col" action="#" method="get">
+          <div class="form-group w-100">
+            <div class="Typeahead Typeahead--twitterUsers">
+              <div class="u-posRelative">
+                <input class="demo-input Typeahead-input form-control-plaintext w-100" type="text"
+                  placeholder="NewsOP'da ara..." name="q" title="" autofocus>
+                <div class="spinner-border Typeahead-spinner" role="status"><span class="sr-only">Loading...</span>
+                </div><i class="close-search" data-feather="x"></i>
+              </div>
+              <div class="Typeahead-menu"></div>
+            </div>
+          </div>
+        </form>
+        <div class="header-logo-wrapper col-auto p-0">
+          <div class="logo-wrapper"><a href="index.html"><img class="img-fluid" src="../assets/images/logo/logo.png"
+                alt=""></a></div>
+          <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="align-center"></i>
+          </div>
+        </div>
+        <div class="left-header col-xxl-5 col-xl-6 col-lg-5 col-md-4 col-sm-3 p-0">
+          <div class="notification-slider">
+            <div class="d-flex h-100"> <img src="../assets/images/giftools.gif" alt="gif">
+              <h6 class="mb-0 f-w-400"><span class="font-primary">Unutma! </span> <span class="f-light"> tamamlanmamış
+                  görevlerin var.</span></h6><i class="icon-arrow-top-right f-light"></i>
+            </div>
+            <div class="d-flex h-100"><img src="../assets/images/giftools.gif" alt="gif">
+              <h6 class="mb-0 f-w-400"><span class="f-light">Takvimde yeni bir haber eklendi </span></h6><a class="ms-1"
+                href="#" target="_blank">Kontrol et !</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-right col-xxl-7 col-xl-6 col-md-7 col-8 pull-right right-header p-0 ms-auto">
+          <ul class="nav-menus">
+            <li class="language-nav">
+              <div class="translate_wrapper">
+                <div class="current_lang">
+                  <div class="lang"><i class="flag-icon flag-icon-tr"></i><span class="lang-txt">TR </span></div>
+                </div>
+                <div class="more_lang">
+                  <div class="lang selected" data-value="tr"><i class="flag-icon flag-icon-tr"></i><span
+                      class="lang-txt">Turkish<span> </span></div>
+                  <div class="lang" data-value="en"><i class="flag-icon flag-icon-us"></i><span
+                      class="lang-txt">English<span> (US)</span></span></div>
+                  <div class="lang" data-value="de"><i class="flag-icon flag-icon-de"></i><span
+                      class="lang-txt">Deutsch</span></div>
+                  <div class="lang" data-value="es"><i class="flag-icon flag-icon-es"></i><span
+                      class="lang-txt">Español</span></div>
+                  <div class="lang" data-value="fr"><i class="flag-icon flag-icon-fr"></i><span
+                      class="lang-txt">Français</span></div>
+                  <div class="lang" data-value="pt"><i class="flag-icon flag-icon-pt"></i><span
+                      class="lang-txt">Português<span> (BR)</span></span></div>
+                  <div class="lang" data-value="cn"><i class="flag-icon flag-icon-cn"></i><span
+                      class="lang-txt">简体中文</span></div>
+                  <div class="lang" data-value="ae"><i class="flag-icon flag-icon-ae"></i><span class="lang-txt">لعربية
+                      <span> (ae)</span></span></div>
+                </div>
+              </div>
+            </li>
+            <li> <span class="header-search">
+
+                <use href="../assets/svg/icon-sprite.svg#search"></use>
+              </span></li>
+            <li class="onhover-dropdown">
+              <svg class="stroke-icon">
+                <use href="../assets/svg/icon-sprite.svg#star"></use>
+              </svg>
+              <div class="onhover-show-div bookmark-flip">
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="front">
+                      <h6 class="f-18 mb-0 dropdown-title">Yer İmleri</h6>
+                      <ul class="bookmark-dropdown">
+                        <li>
+                          <div class="row">
+                            <div class="col-4 text-center">
+                              <div class="bookmark-content">
+                                <div class="bookmark-icon"><i data-feather="file-text"></i></div><span>Haberler</span>
+                              </div>
+                            </div>
+                            <div class="col-4 text-center">
+                              <div class="bookmark-content">
+                                <div class="bookmark-icon"><i data-feather="user"></i></div><span>Profil</span>
+                              </div>
+                            </div>
+                            <div class="col-4 text-center">
+                              <div class="bookmark-content">
+                                <div class="bookmark-icon"><i data-feather="server"></i></div><span>Tablolar</span>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="text-center"><a class="flip-btn f-w-700" id="flip-btn" href="javascript:void(0)">Yeni
+                            Yer İmi Ekle</a></li>
+                      </ul>
+                    </div>
+                    <div class="back">
+                      <ul>
+                        <li>
+                          <div class="bookmark-dropdown flip-back-content">
+                            <input type="text" placeholder="arama...">
+                          </div>
+                        </li>
+                        <li><a class="f-w-700 d-block flip-back" id="flip-back" href="javascript:void(0)">Geri</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="mode">
+                <svg class="stroke-icon">
+                  <use href="../assets/svg/icon-sprite.svg#moon"></use>
+                </svg>
+              </div>
+            </li>
+
+            </li>
+            <li class="onhover-dropdown">
+              <div class="notification-box">
+                <svg class="stroke-icon">
+                  <use href="../assets/svg/icon-sprite.svg#notification"></use>
+                </svg><span class="badge rounded-pill badge-secondary">4 </span>
+              </div>
+              <div class="onhover-show-div notification-dropdown">
+                <h6 class="f-18 mb-0 dropdown-title">Bildirimler </h6>
+                <ul>
+                  <li class="b-l-primary border-4">
+                    <p>Yeni haber atandı <span class="font-danger">10 dk.</span></p>
+                  </li>
+                  <li class="b-l-success border-4">
+                    <p>Takvime Yeni Haber Eklendi<span class="font-success">1 saat</span></p>
+                  </li>
+                  <li class="b-l-secondary border-4">
+                    <p>Haber Yayınlandı<span class="font-secondary">3 saat</span></p>
+                  </li>
+                  <li class="b-l-warning border-4">
+                    <p>Haber Yayınlandı<span class="font-warning">6 saat</span></p>
+                  </li>
+                  <li><a class="f-w-700" href="#">Hepsini GÖrüntüle</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="profile-nav onhover-dropdown pe-0 py-0">
+              <div class="media profile-media"><img class="b-r-10" src="../assets/images/dashboard/profile.png" alt="">
+                <div class="media-body"><span>Taha Erel</span>
+                  <p class="mb-0">Muhabir <i class="middle fa fa-angle-down"></i></p>
+                </div>
+              </div>
+              <ul class="profile-dropdown onhover-show-div">
+                <li><a href="#"><i data-feather="user"></i><span>Hesap </span></a></li>
+                <li><a href="#"><i data-feather="mail"></i><span>Mailler</span></a></li>
+                <li><a href="#"><i data-feather="file-text"></i><span>Görevler</span></a></li>
+                <li><a href="#"><i data-feather="settings"></i><span>Ayarlar</span></a></li>
+                <li><a href="#"><i data-feather="log-in"> </i><span>Çıkış Yap</span></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <script class="result-template" type="text/x-handlebars-template">
+            <div class="ProfileCard u-cf">                        
+            <div class="ProfileCard-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay m-0"><path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path><polygon points="12 15 17 21 7 21 12 15"></polygon></svg></div>
+            <div class="ProfileCard-details">
+            <div class="ProfileCard-realName">{{name}}</div>
+            </div>
+            </div>
+          </script>
+        <script class="empty-template"
+          type="text/x-handlebars-template"><div class="EmptyMessage">aramanız 0 sonuç verdi. Bu büyük olasılıkla arka ucun kapalı olduğu anlamına gelir.</div></script>
+      </div>
+    </div>
+    <!-- Page Header Ends                              -->
+    <!-- Page Body Start-->
+    <div class="page-body-wrapper">
+      <!-- Page Sidebar Start-->
+      <div class="sidebar-wrapper" sidebar-layout="stroke-svg">
+        <div>
+          <div class="logo-wrapper"><a href="index.html"><img class="img-fluid for-light"
+                src="../assets/images/logo/logo.png" alt=""><img class="img-fluid for-dark"
+                src="../assets/images/logo/logo_dark.png" alt=""></a>
+            <div class="back-btn"><i class="fa fa-angle-left"></i></div>
+          </div>
+          <div class="logo-icon-wrapper"><a href="index.html"><img class="img-fluid"
+                src="../assets/images/logo/logo-icon.png" alt=""></a></div>
+          <nav class="sidebar-main">
+            <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
+            <div id="sidebar-menu">
+              <ul class="sidebar-links" id="simple-bar">
+                <li class="back-btn"><a href="index.html"><img class="img-fluid"
+                      src="../assets/images/logo/logo-icon.png" alt=""></a>
+                  <div class="mobile-back text-end"><span>Geri</span><i class="fa fa-angle-right ps-2"
+                      aria-hidden="true"></i></div>
+                </li>
+                <li class="pin-title sidebar-main-title">
+                  <div>
+                    <h6>Sabitlendi</h6>
+                  </div>
+                </li>
+                <li class="sidebar-main-title">
+                  <div>
+                    <h6 class="lan-1">Genel</h6>
+                  </div>
+                </li>
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i>
+                  <a class="sidebar-link sidebar-title" href="#">
+                    <svg class="stroke-icon">
+                      <use href="../assets/svg/icon-sprite.svg#stroke-home"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                      <use href="../assets/svg/icon-sprite.svg#fill-home"></use>
+                    </svg><span class="lan-3">Anasayfa </span></a>
+
+                </li>
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                    <svg class="stroke-icon">
+                      <use href="../assets/svg/icon-sprite.svg#stroke-widget"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                      <use href="../assets/svg/icon-sprite.svg#fill-widget"></use>
+                    </svg><span class="lan-6">Veriler</span></a>
+                  <ul class="sidebar-submenu">
+                    <li><a href="veriler.html">Genel</a></li>
+                    <li><a href="veriler.html">Kişiler</a></li>
+
+                  </ul>
+                </li>
+
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav"
+                    href="profil.html">
+                    <svg class="stroke-icon">
+                      <use href="../assets/svg/icon-sprite.svg#stroke-bookmark"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                      <use href="../assets/svg/icon-sprite.svg#fill-bookmark"> </use>
+                    </svg><span>Profilim</span></a></li>
+
+
+                <li class="sidebar-main-title">
+                  <div>
+                    <h6 class="lan-8">Applications</h6>
+                  </div>
+                </li>
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"> </i>
+                  <label class="badge badge-light-secondary">Yeni</label><a class="sidebar-link sidebar-title" href="#">
+                    <svg class="stroke-icon">
+                      <use href="../assets/svg/icon-sprite.svg#stroke-project"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                      <use href="../assets/svg/icon-sprite.svg#fill-project"></use>
+                    </svg><span>Haberler</span></a>
+                  <ul class="sidebar-submenu">
+                    <li><a href="haberler.html">Haber Listesi</a></li>
+                    <li><a href="http://localhost:3000/newsop/editor" target=”_blank”>Yeni Oluştur</a></li>
+                  </ul>
+                </li>
+
+
+
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"> </i>
+                  <label class="badge badge-light-secondary">Yeni</label><a class="sidebar-link sidebar-title" href="#">
+                    <svg class="stroke-icon">
+                      <use href="../assets/svg/icon-sprite.svg#stroke-to-do"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                      <use href="../assets/svg/icon-sprite.svg##fill-to-do"></use>
+                    </svg><span>Görevler</span></a>
+                  <ul class="sidebar-submenu">
+                    <li><a href="gorevler.html">Görevlerim</a></li>
+                    <li><a href="kanban.html">Görev Tahtası</a></li>
+                  </ul>
+                </li>
+
+
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav"
+                    href="takvim.html">
+                    <svg class="stroke-icon">
+                      <use href="../assets/svg/icon-sprite.svg#stroke-calendar"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                      <use href="../assets/svg/icon-sprite.svg#fill-calender"></use>
+                    </svg><span>Takvim</span></a></li>
+
+
+
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                    <svg class="stroke-icon">
+                      <use href="../assets/svg/icon-sprite.svg#stroke-chat"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                      <use href="../assets/svg/icon-sprite.svg#fill-chat"></use>
+                    </svg><span>İletişim</span></a>
+                  <ul class="sidebar-submenu">
+                    <li><a href="ozel-mesaj.html">Özel Mesajlaşma</a></li>
+                    <li><a href="grup-mesaj.html">Grup Mesajlaşma</a></li>
+                    <li><a href="kontaklar.html">Kontaklar</a></li>
+                    <li><a href="#">Sosyal</a></li>
+                  </ul>
+                </li>
+
+
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav"
+                    href="dosyayoneticisi.html">
+                    <svg class="stroke-icon">
+                      <use href="../assets/svg/icon-sprite.svg#stroke-file"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                      <use href="../assets/svg/icon-sprite.svg#fill-file"></use>
+                    </svg><span>Dosya Yöneticisi</span></a></li>
+
+
+
+
+
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav"
+                    href="arama.html">
+                    <svg class="stroke-icon">
+                      <use href="../assets/svg/icon-sprite.svg#stroke-search"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                      <use href="../assets/svg/icon-sprite.svg#fill-search"> </use>
+                    </svg><span>Gündem Tarama</span></a></li>
+
+
+                <li class="sidebar-main-title">
+                  <div>
+                    <h6>Araçlar</h6>
+                  </div>
+                </li>
+
+
+
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"> </i>
+                  <a class="sidebar-link sidebar-title" href="#">
+                    <svg class="stroke-icon">
+                      <use href="../assets/svg/icon-sprite.svg#stroke-gallery"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                      <use href="../assets/svg/icon-sprite.svg##fill-gallery"></use>
+                    </svg><span>Görseller</span></a>
+                  <ul class="sidebar-submenu">
+                    <li><a href="galeri.html">Galeri</a></li>
+                    <li><a href="gorsel-duzenle.html">Görsel Düzenleme</a></li>
+                  </ul>
+                </li>
+
+
+
+                <li class="sidebar-list">
+                  <i class="fa fa-thumb-tack"></i>
+                  <a class="sidebar-link sidebar-title" href="NewsOP_Voice.zip" download>
+                    <svg class="stroke-icon">
+                      <use href="../assets/svg/icon-sprite.svg#stroke-project"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                      <use href="../assets/svg/icon-sprite.svg#fill-project"></use>
+                    </svg>
+                    <span>Deşifre Eklentisi</span>
+                  </a>
+                </li>
+
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="">
+                    <svg class="stroke-icon">
+                      <use href="../assets/svg/icon-sprite.svg#stroke-learning"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                      <use href="../assets/svg/icon-sprite.svg#fill-learning"></use>
+                    </svg><span>Öğrenme Merkezi</span></a>
+
+                </li>
+
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav"
+                    href="yardim-talebi.html">
+                    <svg class="stroke-icon">
+                      <use href="../assets/svg/icon-sprite.svg#stroke-support-tickets"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                      <use href="../assets/svg/icon-sprite.svg#fill-support-tickets"></use>
+                    </svg><span>Yardım Talebi</span></a></li>
+              </ul>
+            </div>
+            <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
+          </nav>
+        </div>
+      </div>
+      <!-- Page Sidebar Ends-->
+        <div class="page-body">
+          <div class="container-fluid">
+            <div class="page-title">
+              <div class="row">
+                <div class="col-6">
+                  <h3>Profilim</h3>
+                </div>
+                <div class="col-6">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">                                       
+                        <svg class="stroke-icon">
+                          <use href="../assets/svg/icon-sprite.svg#stroke-home"></use>
+                        </svg></a></li>
+                    <li class="breadcrumb-item">Uygulamalar</li>
+                    <li class="breadcrumb-item active">Profil</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Container-fluid starts-->
+          <div class="container-fluid">
+            <div class="email-wrap bookmark-wrap">
+              <div class="row">
+                <div class="col-xl-3 box-col-6">
+                  <div class="md-sidebar"><a class="btn btn-primary md-sidebar-toggle" href="javascript:void(0)">Filtreleme</a>
+                    <div class="md-sidebar-aside job-left-aside custom-scrollbar">
+                      <div class="email-left-aside">
+                        <div class="card">
+                          <div class="card-body">
+                            <div class="email-app-sidebar left-bookmark">
+                              <div class="media">
+                                <div class="media-size-email"><img class="me-3 rounded-circle" src="../assets/images/user/user.png" alt=""></div>
+                                <div class="media-body">
+                                  <h6 class="f-w-600">Taha Erel</h6>
+                                  <p>tahaerel@mail.com</p>
+                                </div>
+                              </div>
+                              <ul class="nav main-menu" role="tablist">
+                                <li class="nav-item">
+                                  <button class="button-primary btn-block btn-mail w-100" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="me-2" data-feather="bookmark"></i> Ekleme Yap</button>
+                                </li>
+                                <li class="nav-item"><span class="main-title"> Görüntüle</span></li>
+                                <li><a class="active" id="pills-created-tab" data-bs-toggle="pill" href="#pills-created" role="tab" aria-controls="pills-created" aria-selected="true"><span class="title"> Benim Tarafımdan Oluşturulanlar</span></a></li>
+                                <li><a id="pills-favourites-tab" data-bs-toggle="pill" href="#pills-favourites" role="tab" aria-controls="pills-favourites" aria-selected="false"><span class="title"> Favorilerim</span></a></li>
+                                <li><a id="pills-shared-tab" data-bs-toggle="pill" href="#pills-shared" role="tab" aria-controls="pills-shared" aria-selected="false"><span class="title"> İstatistiklerim</span></a></li>
+                                <li><a id="pills-bookmark-tab" data-bs-toggle="pill" href="#pills-bookmark" role="tab" aria-controls="pills-bookmark" aria-selected="false"><span class="title"> Görseller</span></a></li>
+                                <li>
+                                  <hr>
+                                </li>
+                                <li><span class="main-title"> Yıllar<span class="pull-right"><a href="#" data-bs-toggle="modal" data-bs-target="#createtag"><i data-feather="plus-circle"></i></a></span></span></li>
+                                <li><a id="pills-notification-tab" data-bs-toggle="pill" href="#pills-notification" role="tab" aria-controls="pills-notification" aria-selected="false"><span class="title"> 2024</span></a></li>
+                                <li><a id="pills-newsletter-tab" data-bs-toggle="pill" href="#pills-newsletter" role="tab" aria-controls="pills-newsletter" aria-selected="false"><span class="title"> 2023</span></a></li>
+                                <li><a id="pills-business-tab" data-bs-toggle="pill" href="#pills-business" role="tab" aria-controls="pills-business-tab" aria-selected="false"><span class="title"> 2022</span></a></li>
+                                <li><a id="pills-holidays-tab" data-bs-toggle="pill" href="#pills-holidays" role="tab" aria-controls="pills-holidays-tab" aria-selected="false"><span class="title"> 2021</span></a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-9 col-md-12 box-col-12">
+                  <div class="email-right-aside bookmark-tabcontent">
+                    <div class="card email-body radius-left">
+                      <div class="ps-0">
+                        <div class="tab-content">
+                          <div class="tab-pane fade active show" id="pills-created" role="tabpanel" aria-labelledby="pills-created-tab">
+                            <div class="card mb-0">
+                              <div class="card-header d-flex">
+                                <h6 class="mb-0">Benim Tarafımdan Oluşturulanlar</h6>
+                                <ul>
+                                  <li><a class="grid-bookmark-view" href="javascript:void(0)"><i data-feather="grid"></i></a></li>
+                                  <li><a class="list-layout-view" href="javascript:void(0)"><i data-feather="list"></i></a></li>
+                                </ul>
+                              </div>
+                              <div class="card-body pb-0">
+                                <div class="details-bookmark text-center">
+                                  <div class="row" id="bookmarkData">
+                                    <div class="col-xxl-3 col-md-4 col-ed-4">
+                                      <div class="card card-with-border bookmark-card o-hidden">
+                                        <div class="details-website"><img class="img-fluid" src="../assets/images/lightgallry/01.jpg" alt="">
+                                          <div class="favourite-icon favourite_0" onclick="setFavourite(0)"><a href="#"><i class="fa fa-star"></i></a></div>
+                                          <div class="desciption-data">
+                                            <div class="title-bookmark">
+                                              <h6 class="title_0">Akçakoca'da rüzgarın etkisiyle dalga boyu 4 metreye ulaştı </h6>
+                                              <p class="weburl_0">https://www.aa.com.tr/tr/gundem/akcakocada-ruzgarin-etkisiyle-dalga-boyu-4-metreye-ulasti/3120658</p>
+                                              <div class="hover-block">
+                                                <ul>
+                                                  <li><a href="" onclick="editBookmark(0)" data-bs-toggle="modal" data-bs-target="#edit-bookmark"><i data-feather="edit-2"></i></a></li>
+                                                  <li><a href="#"><i data-feather="link"></i></a></li>
+                                                  <li><a href="#"><i data-feather="share-2"></i></a></li>
+                                                  <li><a href="#"><i data-feather="trash-2"></i></a></li>
+                                                  <li class="pull-right text-end"><a href="#"><i data-feather="tag"></i></a></li>
+                                                </ul>
+                                              </div>
+                                              <div class="content-general">
+                                                <p class="desc_0"> İlçede öğleden sonra etkisini artıran rüzgar nedeniyle denizde dalga boyu 4 metreye ulaştı.
+
+                                                  Kuvvetli rüzgar nedeniyle denize açılamayan balıkçılar, teknelerini limanda mendireğe yakın alanlara çekti.</p><span class="collection_0">Gündem</span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xxl-3 col-md-4 col-ed-4">
+                                      <div class="card card-with-border bookmark-card o-hidden">
+                                        <div class="details-website"><img class="img-fluid" src="../assets/images/lightgallry/02.jpg" alt="">
+                                          <div class="favourite-icon favourite_1" onclick="setFavourite(1)"><a href="#"><i class="fa fa-star"></i></a></div>
+                                          <div class="desciption-data">
+                                            <div class="title-bookmark">
+                                              <h6 class="title_1">ABD Dışişleri Bakan Yardımcısı Vekili ve Siyasi İşler Müsteşarı Nuland, Türkiye'ye geliyor</h6>
+                                              <p class="weburl_1">https://www.aa.com.tr/tr/gundem/abd-disisleri-bakan-yardimcisi-vekili-nuland-turkiyeye-geliyor/</p>
+                                              <div class="hover-block">
+                                                <ul>
+                                                  <li><a href="" onclick="editBookmark(1)" data-bs-toggle="modal" data-bs-target="#edit-bookmark"><i data-feather="edit-2"></i></a></li>
+                                                  <li><a href="#"><i data-feather="link"></i></a></li>
+                                                  <li><a href="#"><i data-feather="share-2"></i></a></li>
+                                                  <li><a href="#"><i data-feather="trash-2"></i></a></li>
+                                                  <li class="pull-right text-end"><a href="#"><i data-feather="tag"></i></a></li>
+                                                </ul>
+                                              </div>
+                                              <div class="content-general">
+                                                <p class="desc_1">ABD Dışişleri Bakan Yardımcısı Vekili ve Siyasi İşler Müsteşarı Victoria Nuland, Türkiye-ABD Stratejik Mekanizması kapsamında Türkiye'ye geliyor.</p><span class="collection_1">Gündem</span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xxl-3 col-md-4 col-ed-4">
+                                      <div class="card card-with-border bookmark-card o-hidden">
+                                        <div class="details-website"><img class="img-fluid" src="../assets/images/lightgallry/03.jpg" alt="">
+                                          <div class="favourite-icon favourite_2" onclick="setFavourite(2)"><a href="#"><i class="fa fa-star"></i></a></div>
+                                          <div class="desciption-data">
+                                            <div class="title-bookmark">
+                                              <h6 class="title_2">Jeotermal seranın domatesleri Hollanda'ya gönderiliyor</h6>
+                                              <p class="weburl_2">https://www.aa.com.tr/tr/ekonomi/jeotermal-seranin-domatesleri-hollandaya-gonderiliyor/3120457</p>
+                                              <div class="hover-block">
+                                                <ul>
+                                                  <li><a href="" onclick="editBookmark(2)" data-bs-toggle="modal" data-bs-target="#edit-bookmark"><i data-feather="edit-2"></i></a></li>
+                                                  <li><a href="#"><i data-feather="link"></i></a></li>
+                                                  <li><a href="#"><i data-feather="share-2"></i></a></li>
+                                                  <li><a href="#"><i data-feather="trash-2"></i></a></li>
+                                                  <li class="pull-right text-end"><a href="#"><i data-feather="tag"></i></a></li>
+                                                </ul>
+                                              </div>
+                                              <div class="content-general">
+                                                <p class="desc_2">Nevşehir'in şifa dağıtan kaplıcaları ile bilinen Kozaklı ilçesinde, jeotermal sudan faydalanılarak kurulan seralarda üretilen domatesler, başta dünyanın önde gelen tarım ülkesi Hollanda olmak üzere Avrupa'ya ihraç ediliyor.
+                                                </p><span class="collection_2">Ekonomi</span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xxl-3 col-md-4 col-ed-4">
+                                      <div class="card card-with-border bookmark-card o-hidden">
+                                        <div class="details-website"><img class="img-fluid" src="../assets/images/lightgallry/04.jpg" alt="">
+                                          <div class="favourite-icon favourite_3" onclick="setFavourite(3)"><a href="#"><i class="fa fa-star"></i></a></div>
+                                          <div class="desciption-data">
+                                            <div class="title-bookmark">
+                                              <h6 class="title_3">Bitcoin kurumsal yatırımcı sınavında</h6>
+                                              <p class="weburl_3">https://www.aa.com.tr/tr/ekonomi/bitcoin-kurumsal-yatirimci-sinavinda/3120445</p>
+                                              <div class="hover-block">
+                                                <ul>
+                                                  <li><a href="" onclick="editBookmark(3)" data-bs-toggle="modal" data-bs-target="#edit-bookmark"><i data-feather="edit-2"></i></a></li>
+                                                  <li><a href="#"><i data-feather="link"></i></a></li>
+                                                  <li><a href="#"><i data-feather="share-2"></i></a></li>
+                                                  <li><a href="#"><i data-feather="trash-2"></i></a></li>
+                                                  <li class="pull-right text-end"><a href="#"><i data-feather="tag"></i></a></li>
+                                                </ul>
+                                              </div>
+                                              <div class="content-general">
+                                                <p class="desc_3">Spot Bitcoin borsa yatırım fonlarına (ETF) ilginin artması ve kurumsal yatırımcılar tarafından kabul görmesi durumunda, diğer kripto para ETF'lerin de önünün açılabileceği belirtiliyor.</p><span class="collection_3">Ekonomi</span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xxl-3 col-md-4 col-ed-4">
+                                      <div class="card card-with-border bookmark-card o-hidden">
+                                        <div class="details-website"><img class="img-fluid" src="../assets/images/lightgallry/05.jpg" alt="">
+                                          <div class="favourite-icon favourite_4" onclick="setFavourite(4)"><a href="#"><i class="fa fa-star"></i></a></div>
+                                          <div class="desciption-data">
+                                            <div class="title-bookmark">
+                                              <h6 class="title_4">Japonya'daki depremlerde yaşamını yitirenlerin sayısı 236'ya çıktı</h6>
+                                              <p class="weburl_4">https://www.aa.com.tr/tr/dunya/japonyadaki-depremlerde-yasamini-yitirenlerin-sayisi-236ya-cikti/3120902</p>
+                                              <div class="hover-block">
+                                                <ul>
+                                                  <li><a href="" onclick="editBookmark(4)" data-bs-toggle="modal" data-bs-target="#edit-bookmark"><i data-feather="edit-2"></i></a></li>
+                                                  <li><a href="#"><i data-feather="link"></i></a></li>
+                                                  <li><a href="#"><i data-feather="share-2"></i></a></li>
+                                                  <li><a href="#"><i data-feather="trash-2"></i></a></li>
+                                                  <li class="pull-right text-end"><a href="#"><i data-feather="tag"></i></a></li>
+                                                </ul>
+                                              </div>
+                                              <div class="content-general">
+                                                <p class="desc_4">Japonya'nın batısındaki İşikava eyaleti ve bu bölgedeki Noto Yarımadası kıyısında meydana gelen depremlerde hayatını kaybedenlerin sayısı 236'ya yükseldi</p><span class="collection_4">Dünya           </span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xxl-3 col-md-4 col-ed-4">
+                                      <div class="card card-with-border bookmark-card o-hidden">
+                                        <div class="details-website"><img class="img-fluid" src="../assets/images/lightgallry/06.jpg" alt="">
+                                          <div class="favourite-icon favourite_5" onclick="setFavourite(5)"><a href="#"><i class="fa fa-star"></i></a></div>
+                                          <div class="desciption-data">
+                                            <div class="title-bookmark">
+                                              <h6 class="title_5">Kayserispor, teknik direktör Burak Yılmaz'la 2,5 yıllığına anlaştı</h6>
+                                              <p class="weburl_5">https://www.aa.com.tr/tr/futbol/kayserispor-teknik-direktor-burak-yilmazla-2-5-yilligina-anlasti/3120788</p>
+                                              <div class="hover-block">
+                                                <ul>
+                                                  <li><a href="" onclick="editBookmark(5)" data-bs-toggle="modal" data-bs-target="#edit-bookmark"><i data-feather="edit-2"></i></a></li>
+                                                  <li><a href="#"><i data-feather="link"></i></a></li>
+                                                  <li><a href="#"><i data-feather="share-2"></i></a></li>
+                                                  <li><a href="#"><i data-feather="trash-2"></i></a></li>
+                                                  <li class="pull-right text-end"><a href="#"><i data-feather="tag"></i></a></li>
+                                                </ul>
+                                              </div>
+                                              <div class="content-general">
+                                                <p class="desc_5">Trendyol Süper Lig ekibi Mondihome Kayserispor, teknik direktör Burak Yılmaz ile 2,5 yıllığına anlaşmaya vardı.</p><span class="collection_5">Futbol</span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="fade tab-pane" id="pills-favourites" role="tabpanel" aria-labelledby="pills-favourites-tab">
+                            <div class="card mb-0">
+                              <div class="card-header d-flex">
+                                <h6 class="mb-0">Favorilerim</h6>
+                                <ul>
+                                  <li><a class="grid-bookmark-view" href="#"><i data-feather="grid"></i></a></li>
+                                  <li><a class="list-layout-view" href="#"><i data-feather="list"></i></a></li>
+                                </ul>
+                              </div>
+                              <div class="card-body">
+                                <div class="details-bookmark text-center">
+                                  <div class="row" id="favouriteData"></div>
+                                  <div class="no-favourite"><span>İçerik Bulunamadı</span></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="fade tab-pane" id="pills-shared" role="tabpanel" aria-labelledby="pills-shared-tab">
+                            <div class="card mb-0">
+                              <div class="card-header d-flex">
+                                <h6 class="mb-0">İstatistiklerim</h6>
+                                <ul>
+                                  <li><a class="grid-bookmark-view" href="#"><i data-feather="grid"></i></a></li>
+                                  <li><a class="list-layout-view" href="#"><i data-feather="list"></i></a></li>
+                                </ul>
+                              </div>
+                              <div class="card-body">
+                                <div class="details-bookmark text-center"><span> <b> Bu Ay</b> <br>Toplam kelime: 3540 <br>Toplam sözcük: 43215<br>Yapılan Haber: 24
+                        
+                                </span></div>
+                     
+                              </div>
+                            </div>
+                          </div>
+                          <div class="fade tab-pane" id="pills-bookmark" role="tabpanel" aria-labelledby="pills-bookmark-tab">
+                            <div class="card mb-0">
+                              <div class="card-header d-flex">
+                                <h6 class="mb-0">Benim Oluşturduklarım</h6>
+                                <ul>
+                                  <li><a class="grid-bookmark-view" href="#"><i data-feather="grid"></i></a></li>
+                                  <li><a class="list-layout-view" href="#"><i data-feather="list"></i></a></li>
+                                </ul>
+                              </div>
+                              <div class="card-body">
+                                <div class="details-bookmark text-center">
+                                  <div class="row" id="bookmarkData1">
+                                    <div class="col-xxl-3 col-md-4 col-ed-4">
+                                      <div class="card card-with-border bookmark-card o-hidden">
+                                        <div class="details-website"><img class="img-fluid" src="../assets/images/lightgallry/07.jpg" alt="">
+                                          <div class="favourite-icon favourite_0" onclick="setFavourite(0)"><a href="#"><i class="fa fa-star"></i></a></div>
+                                          <div class="desciption-data">
+                                            <div class="title-bookmark">
+                                              <h6 class="title_0">Admin Template</h6>
+                                              <p class="weburl_0">http://admin.pixelstrap.com/Cuba/ltr/landing-page.html</p>
+                                              <div class="hover-block">
+                                                <ul>
+                                                  <li><a href="" onclick="editBookmark(0)" data-bs-toggle="modal" data-bs-target="#edit-bookmark"><i data-feather="edit-2"></i></a></li>
+                                                  <li><a href="#"><i data-feather="link"></i></a></li>
+                                                  <li><a href="#"><i data-feather="share-2"></i></a></li>
+                                                  <li><a href="#"><i data-feather="trash-2"></i></a></li>
+                                                  <li class="pull-right text-end"><a href="#"><i data-feather="tag"></i></a></li>
+                                                </ul>
+                                              </div>
+                                              <div class="content-general">
+                                                <p class="desc_0">Cuba is beautifully crafted, clean and modern designed admin theme with 6 different demos and light - dark versions.</p><span class="collection_0">General</span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xxl-3 col-md-4 col-ed-4">
+                                      <div class="card card-with-border bookmark-card o-hidden">
+                                        <div class="details-website"><img class="img-fluid" src="../assets/images/lightgallry/07.jpg" alt="">
+                                          <div class="favourite-icon favourite_1" onclick="setFavourite(1)"><a href="#"><i class="fa fa-star"></i></a></div>
+                                          <div class="desciption-data">
+                                            <div class="title-bookmark">
+                                              <h6 class="title_1">Universal Template</h6>
+                                              <p class="weburl_1">https://angular.pixelstrap.com/universal/landing</p>
+                                              <div class="hover-block">
+                                                <ul>
+                                                  <li><a href="" onclick="editBookmark(1)" data-bs-toggle="modal" data-bs-target="#edit-bookmark"><i data-feather="edit-2"></i></a></li>
+                                                  <li><a href="#"><i data-feather="link"></i></a></li>
+                                                  <li><a href="#"><i data-feather="share-2"></i></a></li>
+                                                  <li><a href="#"><i data-feather="trash-2"></i></a></li>
+                                                  <li class="pull-right text-end"><a href="#"><i data-feather="tag"></i></a></li>
+                                                </ul>
+                                              </div>
+                                              <div class="content-general">
+                                                <p class="desc_1">Universal is beautifully crafted, clean and modern designed admin theme</p><span class="collection_1">General</span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xxl-3 col-md-4 col-ed-4">
+                                      <div class="card card-with-border bookmark-card o-hidden">
+                                        <div class="details-website"><img class="img-fluid" src="../assets/images/lightgallry/07.jpg" alt="">
+                                          <div class="favourite-icon favourite_2" onclick="setFavourite(2)"><a href="#"><i class="fa fa-star"></i></a></div>
+                                          <div class="desciption-data">
+                                            <div class="title-bookmark">
+                                              <h6 class="title_2">Angular Theme</h6>
+                                              <p class="weburl_2">https://angular.pixelstrap.com/cuba/landing</p>
+                                              <div class="hover-block">
+                                                <ul>
+                                                  <li><a href="" onclick="editBookmark(2)" data-bs-toggle="modal" data-bs-target="#edit-bookmark"><i data-feather="edit-2"></i></a></li>
+                                                  <li><a href="#"><i data-feather="link"></i></a></li>
+                                                  <li><a href="#"><i data-feather="share-2"></i></a></li>
+                                                  <li><a href="#"><i data-feather="trash-2"></i></a></li>
+                                                  <li class="pull-right text-end"><a href="#"><i data-feather="tag"></i></a></li>
+                                                </ul>
+                                              </div>
+                                              <div class="content-general">
+                                                <p class="desc_2">Cuba is beautifully crafted, clean and modern designed admin theme</p><span class="collection_2">Fs</span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xxl-3 col-md-4 col-ed-4">
+                                      <div class="card card-with-border bookmark-card o-hidden">
+                                        <div class="details-website"><img class="img-fluid" src="../assets/images/lightgallry/07.jpg" alt="">
+                                          <div class="favourite-icon favourite_3" onclick="setFavourite(3)"><a href="#"><i class="fa fa-star"></i></a></div>
+                                          <div class="desciption-data">
+                                            <div class="title-bookmark">
+                                              <h6 class="title_3">Multikart Admin</h6>
+                                              <p class="weburl_3">http://themes.pixelstrap.com/multikart/back-end/index.html</p>
+                                              <div class="hover-block">
+                                                <ul>
+                                                  <li><a href="" onclick="editBookmark(3)" data-bs-toggle="modal" data-bs-target="#edit-bookmark"><i data-feather="edit-2"></i></a></li>
+                                                  <li><a href="#"><i data-feather="link"></i></a></li>
+                                                  <li><a href="#"><i data-feather="share-2"></i></a></li>
+                                                  <li><a href="#"><i data-feather="trash-2"></i></a></li>
+                                                  <li class="pull-right text-end"><a href="#"><i data-feather="tag"></i></a></li>
+                                                </ul>
+                                              </div>
+                                              <div class="content-general">
+                                                <p class="desc_3">Multikart Admin is modern designed admin theme</p><span class="collection_3">General</span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xxl-3 col-md-4 col-ed-4">
+                                      <div class="card card-with-border bookmark-card o-hidden">
+                                        <div class="details-website"><img class="img-fluid" src="../assets/images/lightgallry/07.jpg" alt="">
+                                          <div class="favourite-icon favourite_4" onclick="setFavourite(4)"><a href="#"><i class="fa fa-star"></i></a></div>
+                                          <div class="desciption-data">
+                                            <div class="title-bookmark">
+                                              <h6 class="title_4">Ecommerece theme</h6>
+                                              <p class="weburl_4">http://themes.pixelstrap.com/multikart</p>
+                                              <div class="hover-block">
+                                                <ul>
+                                                  <li><a href="" onclick="editBookmark(4)" data-bs-toggle="modal" data-bs-target="#edit-bookmark"><i data-feather="edit-2"></i></a></li>
+                                                  <li><a href="#"><i data-feather="link"></i></a></li>
+                                                  <li><a href="#"><i data-feather="share-2"></i></a></li>
+                                                  <li><a href="#"><i data-feather="trash-2"></i></a></li>
+                                                  <li class="pull-right text-end"><a href="#"><i data-feather="tag"></i></a></li>
+                                                </ul>
+                                              </div>
+                                              <div class="content-general">
+                                                <p class="desc_4">Multikart HTML template is an apparently simple but highly functional tempalate designed for creating a flourisahing online business.</p><span class="collection_4">General           </span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xxl-3 col-md-4 col-ed-4">
+                                      <div class="card card-with-border bookmark-card o-hidden">
+                                        <div class="details-website"><img class="img-fluid" src="../assets/images/lightgallry/07.jpg" alt="">
+                                          <div class="favourite-icon favourite_5" onclick="setFavourite(5)"><a href="#"><i class="fa fa-star"></i></a></div>
+                                          <div class="desciption-data">
+                                            <div class="title-bookmark">
+                                              <h6 class="title_5">Tovo app landing page</h6>
+                                              <p class="weburl_5">http://vue.pixelstrap.com/tovo/home-one</p>
+                                              <div class="hover-block">
+                                                <ul>
+                                                  <li><a href="" onclick="editBookmark(5)" data-bs-toggle="modal" data-bs-target="#edit-bookmark"><i data-feather="edit-2"></i></a></li>
+                                                  <li><a href="#"><i data-feather="link"></i></a></li>
+                                                  <li><a href="#"><i data-feather="share-2"></i></a></li>
+                                                  <li><a href="#"><i data-feather="trash-2"></i></a></li>
+                                                  <li class="pull-right text-end"><a href="#"><i data-feather="tag"></i></a></li>
+                                                </ul>
+                                              </div>
+                                              <div class="content-general">
+                                                <p class="desc_5">Amazing Landing Page With Easy Customization</p><span class="collection_5">Fs                      </span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="fade tab-pane" id="pills-notification" role="tabpanel" aria-labelledby="pills-notification-tab">
+                            <div class="card mb-0">
+                              <div class="card-header d-flex">
+                                <h6 class="mb-0">2024</h6>
+                                <ul>
+                                  <li><a class="grid-bookmark-view" href="#"><i data-feather="grid"></i></a></li>
+                                  <li><a class="list-layout-view" href="#"><i data-feather="list"></i></a></li>
+                                </ul>
+                              </div>
+                              <div class="card-body">
+                                <div class="details-bookmark text-center"><span>İçerik Bulunamadı</span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="fade tab-pane" id="pills-newsletter" role="tabpanel" aria-labelledby="pills-newsletter-tab">
+                            <div class="card mb-0">
+                              <div class="card-header d-flex">
+                                <h6 class="mb-0">2023</h6>
+                                <ul>
+                                  <li><a class="grid-bookmark-view" href="#"><i data-feather="grid"></i></a></li>
+                                  <li><a class="list-layout-view" href="#"><i data-feather="list"></i></a></li>
+                                </ul>
+                              </div>
+                              <div class="card-body">
+                                <div class="details-bookmark text-center"><span>İçerik Bulunamadı</span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="fade tab-pane" id="pills-business" role="tabpanel" aria-labelledby="pills-business-tab">
+                            <div class="card mb-0">
+                              <div class="card-header d-flex">
+                                <h6 class="mb-0">2022</h6>
+                                <ul>
+                                  <li><a class="grid-bookmark-view" href="#"><i data-feather="grid"></i></a></li>
+                                  <li><a class="list-layout-view" href="#"><i data-feather="list"></i></a></li>
+                                </ul>
+                              </div>
+                              <div class="card-body">
+                                <div class="details-bookmark text-center"><span>İçerik Bulunamadı</span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="fade tab-pane" id="pills-holidays" role="tabpanel" aria-labelledby="pills-holidays-tab">
+                            <div class="card mb-0">
+                              <div class="card-header d-flex">
+                                <h6 class="mb-0">2021</h6>
+                                <ul>
+                                  <li><a class="grid-bookmark-view" href="#"><i data-feather="grid"></i></a></li>
+                                  <li><a class="list-layout-view" href="#"><i data-feather="list"></i></a></li>
+                                </ul>
+                              </div>
+                              <div class="card-body">
+                                <div class="details-bookmark text-center"><span>İçerik Bulunamadı</span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="fade tab-pane" id="pills-important" role="tabpanel" aria-labelledby="pills-important-tab">
+                            <div class="card mb-0">
+                              <div class="card-header d-flex">
+                                <h6 class="mb-0">Kültür</h6>
+                                <ul>
+                                  <li><a class="grid-bookmark-view" href="#"><i data-feather="grid"></i></a></li>
+                                  <li><a class="list-layout-view" href="#"><i data-feather="list"></i></a></li>
+                                </ul>
+                              </div>
+                              <div class="card-body">
+                                <div class="details-bookmark text-center"><span>İçerik Bulunamadı</span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="fade tab-pane" id="pills-orgenization" role="tabpanel" aria-labelledby="pills-orgenization-tab">
+                            <div class="card mb-0">
+                              <div class="card-header d-flex">
+                                <h6 class="mb-0">Son Dakika</h6>
+                                <ul>
+                                  <li><a class="grid-bookmark-view" href="#"><i data-feather="grid"></i></a></li>
+                                  <li><a class="list-layout-view" href="#"><i data-feather="list"></i></a></li>
+                                </ul>
+                              </div>
+                              <div class="card-body">
+                                <div class="details-bookmark text-center"><span>İçerik Bulunamadı</span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="modal fade modal-bookmark" id="edit-bookmark" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title">Güncelle</h5>
+                                  <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <form class="form-bookmark needs-validation" novalidate="">
+                                    <div class="row g-2">
+                                      <div class="mb-3 mt-0 col-md-12">
+                                        <label>Web Url</label>
+                                        <input class="form-control" id="editurl" type="text" required="" autocomplete="off" value="">
+                                      </div>
+                                      <div class="mb-3 mt-0 col-md-12">
+                                        <label>Başlık</label>
+                                        <input class="form-control" id="edittitle" type="text" required="" autocomplete="off" value="">
+                                      </div>
+                                      <div class="mb-3 mt-0 col-md-12">
+                                        <label>Açıklama</label>
+                                        <textarea class="form-control" id="editdesc" required="" autocomplete="off"></textarea>
+                                      </div>
+                                      <div class="mb-3 mt-0 col-md-6">
+                                        <label>Grup</label>
+                                        <select class="js-example-basic-single">
+                                          <option value="AL">Benim yazdıklarım</option>
+                                        </select>
+                                      </div>
+                                      <div class="mb-3 mt-0 col-md-6">
+                                        <label>Koleksiyon</label>
+                                        <select class="js-example-disabled-results">
+                                          <option value="general">Genel</option>
+                                          <option value="fs">Favoriler</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <button class="btn btn-secondary" type="button">Kaydet</button>
+                                    <button class="btn btn-primary" type="button" data-bs-dismiss="modal">İptal   </button>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="modal fade modal-bookmark" id="createtag" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title">Yeni Tür</h5>
+                                  <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <form class="form-bookmark needs-validation" novalidate="">
+                                    <div class="row g-2">
+                                      <div class="mb-3 mt-0 col-md-12">
+                                        <label>Tür İsmi</label>
+                                        <input class="form-control" type="text" required="" autocomplete="off">
+                                      </div>
+                                      <div class="mb-3 mt-0 col-md-12">
+                                        <label>Tür Rengi</label>
+                                        <input class="form-color d-block" type="color" value="#563d7c">
+                                      </div>
+                                    </div>
+                                    <button class="btn btn-secondary" type="button">Kaydet</button>
+                                    <button class="btn btn-primary" type="button" data-bs-dismiss="modal">İptal</button>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="modal fade modal-bookmark" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Ekle</h5>
+                                  <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <form class="form-bookmark needs-validation" id="bookmark-form" novalidate="">
+                                    <div class="row g-2">
+                                      <div class="mb-3 mt-0 col-md-12">
+                                        <label for="bm-weburl">Url</label>
+                                        <input class="form-control" id="bm-weburl" type="text" required="" autocomplete="off">
+                                      </div>
+                                      <div class="mb-3 mt-0 col-md-12">
+                                        <label for="bm-title">Başlık</label>
+                                        <input class="form-control" id="bm-title" type="text" required="" autocomplete="off">
+                                      </div>
+                                      <div class="mb-3 mt-0 col-md-12">
+                                        <label>Açıklama</label>
+                                        <textarea class="form-control" id="bm-desc" required="" autocomplete="off"></textarea>
+                                      </div>
+                                      <div class="mb-3 mt-0 col-md-6">
+                                        <label>Grup</label>
+                                        <select class="js-example-basic-single" id="bm-group">
+                                          <option value="bookmark">Benim Oluşturduklarım</option>
+                                        </select>
+                                      </div>
+                                      <div class="mb-3 mt-0 col-md-6">
+                                        <label>Koleksiyon</label>
+                                        <select class="js-example-disabled-results" id="bm-collection">
+                                          <option value="general">Genel</option>
+                                          <option value="fs">Favoriler</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <input id="index_var" type="hidden" value="6">
+                                    <button class="btn btn-secondary" id="Bookmark" onclick="submitBookMark()" type="submit">Kaydet</button>
+                                    <button class="btn btn-primary" type="button" data-bs-dismiss="modal">İptal</button>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Container-fluid Ends-->
+        </div>
+        <!-- footer start-->
+        <footer class="footer">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12 footer-copyright text-center">
+                <p class="mb-0">Copyright 2024 © NewsOP  by PushUP  </p>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!-- latest jquery-->
+    <script src="../assets/js/jquery.min.js"></script>
+    <!-- Bootstrap js-->
+    <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- feather icon js-->
+    <script src="../assets/js/icons/feather-icon/feather.min.js"></script>
+    <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
+    <!-- scrollbar js-->
+    <script src="../assets/js/scrollbar/simplebar.js"></script>
+    <script src="../assets/js/scrollbar/custom.js"></script>
+    <!-- Sidebar jquery-->
+    <script src="../assets/js/config.js"></script>
+    <!-- Plugins JS start-->
+    <script src="../assets/js/sidebar-menu.js"></script>
+    <script src="../assets/js/sidebar-pin.js"></script>
+    <script src="../assets/js/bookmark/jquery.validate.min.js"></script>
+    <script src="../assets/js/bookmark/custom.js"></script>
+    <script src="../assets/js/slick/slick.min.js"></script>
+    <script src="../assets/js/slick/slick.js"></script>
+    <script src="../assets/js/header-slick.js"></script>
+    <script src="../assets/js/select2/select2.full.min.js"></script>
+    <script src="../assets/js/select2/select2-custom.js"></script>
+    <script src="../assets/js/form-validation-custom.js"></script>
+    <!-- Plugins JS Ends-->
+    <!-- Theme js-->
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

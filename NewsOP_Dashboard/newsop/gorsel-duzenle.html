@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NewsOP, Yeni Nesil Haber Operasyonları">
+    <meta name="keywords" content="NewsOP, Haber, Editor, Kontrol Paneli">
+    <meta name="author" content="pixelstrap">
+    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+    <title>NewsOP</title>
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.css">
+    <!-- ico-font-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/icofont.css">
+    <!-- Themify icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/themify.css">
+    <!-- Flag icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/flag-icon.css">
+    <!-- Feather icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/feather-icon.css">
+    <!-- Plugins css start-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/slick.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/scrollbar.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/animate.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/image-cropper.css">
+    <!-- Plugins css Ends-->
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/bootstrap.css">
+    <!-- App css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link id="color" rel="stylesheet" href="../assets/css/color-1.css" media="screen">
+    <!-- Responsive css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+  </head>
+  <body> 
+    <!-- loader starts-->
+    <div class="loader-wrapper">
+      <div class="loader-index"> <span></span></div>
+      <svg>
+        <defs></defs>
+        <filter id="goo">
+          <fegaussianblur in="SourceGraphic" stddeviation="11" result="blur"></fegaussianblur>
+          <fecolormatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo"> </fecolormatrix>
+        </filter>
+      </svg>
+    </div>
+    <!-- loader ends-->
+    <!-- tap on top starts-->
+    <div class="tap-top"><i data-feather="chevrons-up"></i></div>
+    <!-- tap on tap ends-->
+     <!-- page-wrapper Start-->
+  <div class="page-wrapper compact-wrapper" id="pageWrapper">
+    <!-- Page Header Start-->
+    <div class="page-header">
+      <div class="header-wrapper row m-0">
+        <form class="form-inline search-full col" action="#" method="get">
+          <div class="form-group w-100">
+            <div class="Typeahead Typeahead--twitterUsers">
+              <div class="u-posRelative">
+                <input class="demo-input Typeahead-input form-control-plaintext w-100" type="text"
+                  placeholder="NewsOP'da ara..." name="q" title="" autofocus>
+                <div class="spinner-border Typeahead-spinner" role="status"><span class="sr-only">Loading...</span>
+                </div><i class="close-search" data-feather="x"></i>
+              </div>
+              <div class="Typeahead-menu"></div>
+            </div>
+          </div>
+        </form>
+        <div class="header-logo-wrapper col-auto p-0">
+          <div class="logo-wrapper"><a href="index.html"><img class="img-fluid" src="../assets/images/logo/logo.png"
+                alt=""></a></div>
+          <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="align-center"></i>
+          </div>
+        </div>
+        <div class="left-header col-xxl-5 col-xl-6 col-lg-5 col-md-4 col-sm-3 p-0">
+          <div class="notification-slider">
+            <div class="d-flex h-100"> <img src="../assets/images/giftools.gif" alt="gif">
+              <h6 class="mb-0 f-w-400"><span class="font-primary">Unutma! </span> <span class="f-light"> tamamlanmamış
+                  görevlerin var.</span></h6><i class="icon-arrow-top-right f-light"></i>
+            </div>
+            <div class="d-flex h-100"><img src="../assets/images/giftools.gif" alt="gif">
+              <h6 class="mb-0 f-w-400"><span class="f-light">Takvimde yeni bir haber eklendi </span></h6><a class="ms-1"
+                href="#" target="_blank">Kontrol et !</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-right col-xxl-7 col-xl-6 col-md-7 col-8 pull-right right-header p-0 ms-auto">
+          <ul class="nav-menus">
+            <li class="language-nav">
+              <div class="translate_wrapper">
+                <div class="current_lang">
+                  <div class="lang"><i class="flag-icon flag-icon-tr"></i><span class="lang-txt">TR </span></div>
+                </div>
+                <div class="more_lang">
+                  <div class="lang selected" data-value="tr"><i class="flag-icon flag-icon-tr"></i><span
+                      class="lang-txt">Turkish<span> </span></div>
+                  <div class="lang" data-value="en"><i class="flag-icon flag-icon-us"></i><span
+                      class="lang-txt">English<span> (US)</span></span></div>
+                  <div class="lang" data-value="de"><i class="flag-icon flag-icon-de"></i><span
+                      class="lang-txt">Deutsch</span></div>
+                  <div class="lang" data-value="es"><i class="flag-icon flag-icon-es"></i><span
+                      class="lang-txt">Español</span></div>
+                  <div class="lang" data-value="fr"><i class="flag-icon flag-icon-fr"></i><span
+                      class="lang-txt">Français</span></div>
+                  <div class="lang" data-value="pt"><i class="flag-icon flag-icon-pt"></i><span
+                      class="lang-txt">Português<span> (BR)</span></span></div>
+                  <div class="lang" data-value="cn"><i class="flag-icon flag-icon-cn"></i><span
+                      class="lang-txt">简体中文</span></div>
+                  <div class="lang" data-value="ae"><i class="flag-icon flag-icon-ae"></i><span class="lang-txt">لعربية
+                      <span> (ae)</span></span></div>
+                </div>
+              </div>
+            </li>
+            <li> <span class="header-search">
+
+                <use href="../assets/svg/icon-sprite.svg#search"></use>
+              </span></li>
+            <li class="onhover-dropdown">
+              <svg class="stroke-icon">
+                <use href="../assets/svg/icon-sprite.svg#star"></use>
+              </svg>
+              <div class="onhover-show-div bookmark-flip">
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="front">
+                      <h6 class="f-18 mb-0 dropdown-title">Yer İmleri</h6>
+                      <ul class="bookmark-dropdown">
+                        <li>
+                          <div class="row">
+                            <div class="col-4 text-center">
+                              <div class="bookmark-content">
+                                <div class="bookmark-icon"><i data-feather="file-text"></i></div><span>Haberler</span>
+                              </div>
+                            </div>
+                            <div class="col-4 text-center">
+                              <div class="bookmark-content">
+                                <div class="bookmark-icon"><i data-feather="user"></i></div><span>Profil</span>
+                              </div>
+                            </div>
+                            <div class="col-4 text-center">
+                              <div class="bookmark-content">
+                                <div class="bookmark-icon"><i data-feather="server"></i></div><span>Tablolar</span>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="text-center"><a class="flip-btn f-w-700" id="flip-btn" href="javascript:void(0)">Yeni
+                            Yer İmi Ekle</a></li>
+                      </ul>
+                    </div>
+                    <div class="back">
+                      <ul>
+                        <li>
+                          <div class="bookmark-dropdown flip-back-content">
+                            <input type="text" placeholder="arama...">
+                          </div>
+                        </li>
+                        <li><a class="f-w-700 d-block flip-back" id="flip-back" href="javascript:void(0)">Geri</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="mode">
+                <svg class="stroke-icon">
+                  <use href="../assets/svg/icon-sprite.svg#moon"></use>
+                </svg>
+              </div>
+            </li>
+
+            </li>
+            <li class="onhover-dropdown">
+              <div class="notification-box">
+                <svg class="stroke-icon">
+                  <use href="../assets/svg/icon-sprite.svg#notification"></use>
+                </svg><span class="badge rounded-pill badge-secondary">4 </span>
+              </div>
+              <div class="onhover-show-div notification-dropdown">
+                <h6 class="f-18 mb-0 dropdown-title">Bildirimler </h6>
+                <ul>
+                  <li class="b-l-primary border-4">
+                    <p>Yeni haber atandı <span class="font-danger">10 dk.</span></p>
+                  </li>
+                  <li class="b-l-success border-4">
+                    <p>Takvime Yeni Haber Eklendi<span class="font-success">1 saat</span></p>
+                  </li>
+                  <li class="b-l-secondary border-4">
+                    <p>Haber Yayınlandı<span class="font-secondary">3 saat</span></p>
+                  </li>
+                  <li class="b-l-warning border-4">
+                    <p>Haber Yayınlandı<span class="font-warning">6 saat</span></p>
+                  </li>
+                  <li><a class="f-w-700" href="#">Hepsini GÖrüntüle</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="profile-nav onhover-dropdown pe-0 py-0">
+              <div class="media profile-media"><img class="b-r-10" src="../assets/images/dashboard/profile.png" alt="">
+                <div class="media-body"><span>Taha Erel</span>
+                  <p class="mb-0">Muhabir <i class="middle fa fa-angle-down"></i></p>
+                </div>
+              </div>
+              <ul class="profile-dropdown onhover-show-div">
+                <li><a href="#"><i data-feather="user"></i><span>Hesap </span></a></li>
+                <li><a href="#"><i data-feather="mail"></i><span>Mailler</span></a></li>
+                <li><a href="#"><i data-feather="file-text"></i><span>Görevler</span></a></li>
+                <li><a href="#"><i data-feather="settings"></i><span>Ayarlar</span></a></li>
+                <li><a href="#"><i data-feather="log-in"> </i><span>Çıkış Yap</span></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <script class="result-template" type="text/x-handlebars-template">
+            <div class="ProfileCard u-cf">                        
+            <div class="ProfileCard-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay m-0"><path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path><polygon points="12 15 17 21 7 21 12 15"></polygon></svg></div>
+            <div class="ProfileCard-details">
+            <div class="ProfileCard-realName">{{name}}</div>
+            </div>
+            </div>
+          </script>
+        <script class="empty-template"
+          type="text/x-handlebars-template"><div class="EmptyMessage">aramanız 0 sonuç verdi. Bu büyük olasılıkla arka ucun kapalı olduğu anlamına gelir.</div></script>
+      </div>
+    </div>
+    <!-- Page Header Ends                              -->
+    <!-- Page Body Start-->
+    <div class="page-body-wrapper">
+      <!-- Page Sidebar Start-->
+      <div class="sidebar-wrapper" sidebar-layout="stroke-svg">
+        <div>
+          <div class="logo-wrapper"><a href="index.html"><img class="img-fluid for-light"
+                src="../assets/images/logo/logo.png" alt=""><img class="img-fluid for-dark"
+                src="../assets/images/logo/logo_dark.png" alt=""></a>
+            <div class="back-btn"><i class="fa fa-angle-left"></i></div>
+          </div>
+          <div class="logo-icon-wrapper"><a href="index.html"><img class="img-fluid"
+                src="../assets/images/logo/logo-icon.png" alt=""></a></div>
+          <nav class="sidebar-main">
+            <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
+            <div id="sidebar-menu">
+              <ul class="sidebar-links" id="simple-bar">
+                <li class="back-btn"><a href="index.html"><img class="img-fluid"
+                      src="../assets/images/logo/logo-icon.png" alt=""></a>
+                  <div class="mobile-back text-end"><span>Geri</span><i class="fa fa-angle-right ps-2"
+                      aria-hidden="true"></i></div>
+                </li>
+                <li class="pin-title sidebar-main-title">
+                  <div>
+                    <h6>Sabitlendi</h6>
+                  </div>
+                </li>
+                <li class="sidebar-main-title">
+                  <div>
+                    <h6 class="lan-1">Genel</h6>
+                  </div>
+                </li>
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i>
+                  <a class="sidebar-link sidebar-title" href="#">
+                    <svg class="stroke-icon">
+                      <use href="../assets/svg/icon-sprite.svg#stroke-home"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                      <use href="../assets/svg/icon-sprite.svg#fill-home"></use>
+                    </svg><span class="lan-3">Anasayfa </span></a>
+
+                </li>
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                    <svg class="stroke-icon">
+                      <use href="../assets/svg/icon-sprite.svg#stroke-widget"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                      <use href="../assets/svg/icon-sprite.svg#fill-widget"></use>
+                    </svg><span class="lan-6">Veriler</span></a>
+                  <ul class="sidebar-submenu">
+                    <li><a href="veriler.html">Genel</a></li>
+                    <li><a href="veriler.html">Kişiler</a></li>
+
+                  </ul>
+                </li>
+
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav"
+                    href="profil.html">
+                    <svg class="stroke-icon">
+                      <use href="../assets/svg/icon-sprite.svg#stroke-bookmark"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                      <use href="../assets/svg/icon-sprite.svg#fill-bookmark"> </use>
+                    </svg><span>Profilim</span></a></li>
+
+
+                <li class="sidebar-main-title">
+                  <div>
+                    <h6 class="lan-8">Applications</h6>
+                  </div>
+                </li>
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"> </i>
+                  <label class="badge badge-light-secondary">Yeni</label><a class="sidebar-link sidebar-title" href="#">
+                    <svg class="stroke-icon">
+                      <use href="../assets/svg/icon-sprite.svg#stroke-project"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                      <use href="../assets/svg/icon-sprite.svg#fill-project"></use>
+                    </svg><span>Haberler</span></a>
+                  <ul class="sidebar-submenu">
+                    <li><a href="haberler.html">Haber Listesi</a></li>
+                    <li><a href="http://localhost:3000/newsop/editor" target=”_blank”>Yeni Oluştur</a></li>
+                  </ul>
+                </li>
+
+
+
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"> </i>
+                  <label class="badge badge-light-secondary">Yeni</label><a class="sidebar-link sidebar-title" href="#">
+                    <svg class="stroke-icon">
+                      <use href="../assets/svg/icon-sprite.svg#stroke-to-do"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                      <use href="../assets/svg/icon-sprite.svg##fill-to-do"></use>
+                    </svg><span>Görevler</span></a>
+                  <ul class="sidebar-submenu">
+                    <li><a href="gorevler.html">Görevlerim</a></li>
+                    <li><a href="kanban.html">Görev Tahtası</a></li>
+                  </ul>
+                </li>
+
+
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav"
+                    href="takvim.html">
+                    <svg class="stroke-icon">
+                      <use href="../assets/svg/icon-sprite.svg#stroke-calendar"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                      <use href="../assets/svg/icon-sprite.svg#fill-calender"></use>
+                    </svg><span>Takvim</span></a></li>
+
+
+
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                    <svg class="stroke-icon">
+                      <use href="../assets/svg/icon-sprite.svg#stroke-chat"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                      <use href="../assets/svg/icon-sprite.svg#fill-chat"></use>
+                    </svg><span>İletişim</span></a>
+                  <ul class="sidebar-submenu">
+                    <li><a href="ozel-mesaj.html">Özel Mesajlaşma</a></li>
+                    <li><a href="grup-mesaj.html">Grup Mesajlaşma</a></li>
+                    <li><a href="kontaklar.html">Kontaklar</a></li>
+                    <li><a href="#">Sosyal</a></li>
+                  </ul>
+                </li>
+
+
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav"
+                    href="dosyayoneticisi.html">
+                    <svg class="stroke-icon">
+                      <use href="../assets/svg/icon-sprite.svg#stroke-file"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                      <use href="../assets/svg/icon-sprite.svg#fill-file"></use>
+                    </svg><span>Dosya Yöneticisi</span></a></li>
+
+
+
+
+
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav"
+                    href="arama.html">
+                    <svg class="stroke-icon">
+                      <use href="../assets/svg/icon-sprite.svg#stroke-search"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                      <use href="../assets/svg/icon-sprite.svg#fill-search"> </use>
+                    </svg><span>Gündem Tarama</span></a></li>
+
+
+                <li class="sidebar-main-title">
+                  <div>
+                    <h6>Araçlar</h6>
+                  </div>
+                </li>
+
+
+
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"> </i>
+                  <a class="sidebar-link sidebar-title" href="#">
+                    <svg class="stroke-icon">
+                      <use href="../assets/svg/icon-sprite.svg#stroke-gallery"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                      <use href="../assets/svg/icon-sprite.svg##fill-gallery"></use>
+                    </svg><span>Görseller</span></a>
+                  <ul class="sidebar-submenu">
+                    <li><a href="galeri.html">Galeri</a></li>
+                    <li><a href="gorsel-duzenle.html">Görsel Düzenleme</a></li>
+                  </ul>
+                </li>
+
+
+
+                <li class="sidebar-list">
+                  <i class="fa fa-thumb-tack"></i>
+                  <a class="sidebar-link sidebar-title" href="NewsOP_Voice.zip" download>
+                    <svg class="stroke-icon">
+                      <use href="../assets/svg/icon-sprite.svg#stroke-project"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                      <use href="../assets/svg/icon-sprite.svg#fill-project"></use>
+                    </svg>
+                    <span>Deşifre Eklentisi</span>
+                  </a>
+                </li>
+
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="">
+                    <svg class="stroke-icon">
+                      <use href="../assets/svg/icon-sprite.svg#stroke-learning"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                      <use href="../assets/svg/icon-sprite.svg#fill-learning"></use>
+                    </svg><span>Öğrenme Merkezi</span></a>
+
+                </li>
+
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav"
+                    href="yardim-talebi.html">
+                    <svg class="stroke-icon">
+                      <use href="../assets/svg/icon-sprite.svg#stroke-support-tickets"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                      <use href="../assets/svg/icon-sprite.svg#fill-support-tickets"></use>
+                    </svg><span>Yardım Talebi</span></a></li>
+              </ul>
+            </div>
+            <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
+          </nav>
+        </div>
+      </div>
+      <!-- Page Sidebar Ends-->
+        <div class="page-body">
+          <div class="container-fluid">
+            <div class="page-title">
+              <div class="row">
+                <div class="col-6">
+                  <h4>Görsel Düzenleme</h4>
+                </div>
+                <div class="col-6">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">                                       
+                        <svg class="stroke-icon">
+                          <use href="../assets/svg/icon-sprite.svg#stroke-home"></use>
+                        </svg></a></li>
+                    <li class="breadcrumb-item">Araçlar</li>
+                    <li class="breadcrumb-item active">Görsel Düzenle</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Container-fluid starts-->
+          <div class="container-fluid">
+            <div class="img-cropper">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4>Görsel Düzenle</h4>
+                      <p class="f-m-light mt-1">
+                         Yapay zeka destekli blurlama ve iyileştirmeyi deneyin</p>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-xl-9 col-md-12">
+                          <div class="img-container"><img id="image" src="../assets/images/other-images/bg-profile.png" alt="Picture"></div>
+                        </div>
+                        <div class="col-xl-3 col-md-12">
+                          <div class="docs-preview clearfix">
+                            <div class="img-preview preview-md"></div>
+                            <div class="img-preview preview-sm"></div>
+                            <div class="img-preview preview-xs"></div>
+                          </div>
+                          <div class="docs-data">
+                            <div class="input-group input-group-sm"><span class="input-group-text">X</span>
+                              <input class="form-control" id="dataX" type="text" placeholder="x"><span class="input-group-text">px</span>
+                            </div>
+                            <div class="input-group input-group-sm"><span class="input-group-text">Y</span>
+                              <input class="form-control" id="dataY" type="text" placeholder="y"><span class="input-group-text">px</span>
+                            </div>
+                            <div class="input-group input-group-sm"><span class="input-group-text">Genişlik</span>
+                              <input class="form-control" id="dataWidth" type="text" placeholder="width"><span class="input-group-text">px</span>
+                            </div>
+                            <div class="input-group input-group-sm"><span class="input-group-text">Yükseklik </span>
+                              <input class="form-control" id="dataHeight" type="text" placeholder="height"><span class="input-group-text">px</span>
+                            </div>
+                            <div class="input-group input-group-sm"><span class="input-group-text">Döndür</span>
+                              <input class="form-control" id="dataRotate" type="text" placeholder="rotate"><span class="input-group-text">deg</span>
+                            </div>
+                            <div class="input-group input-group-sm"><span class="input-group-text">Genişlik X</span>
+                              <input class="form-control" id="dataScaleX" type="text" placeholder="scaleX">
+                            </div>
+                            <div class="input-group input-group-sm"><span class="input-group-text">Genişlik Y</span>
+                              <input class="form-control" id="dataScaleY" type="text" placeholder="scaleY">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row g-2">
+                        <div class="col-xl-9 col-md-12 docs-buttons">
+                          <div class="btn-group">
+                            <button class="btn btn-primary" type="button" data-method="setDragMode" data-option="move" title="Move"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;setDragMode&quot;, &quot;move&quot;)"><span class="fa fa-arrows"></span></span></button>
+                            <button class="btn alert-light-primary" type="button" data-method="setDragMode" data-option="crop" title="Crop"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;setDragMode&quot;, &quot;crop&quot;)"><span class="fa fa-crop"></span></span></button>
+                          </div>
+                          <div class="btn-group">
+                            <button class="btn btn-primary" type="button" data-method="zoom" data-option="0.1" title="Zoom In"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;zoom&quot;, 0.1)"><span class="fa fa-search-plus"></span></span></button>
+                            <button class="btn alert-light-primary" type="button" data-method="zoom" data-option="-0.1" title="Zoom Out"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;zoom&quot;, -0.1)"><span class="fa fa-search-minus"></span></span></button>
+                          </div>
+                          <div class="btn-group">
+                            <button class="btn btn-outline-secondary" type="button" data-method="move" data-option="-10" data-second-option="0" title="Move Left"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;move&quot;, -10, 0)"><span class="fa fa-arrow-left"></span></span></button>
+                            <button class="btn btn-outline-secondary" type="button" data-method="move" data-option="10" data-second-option="0" title="Move Right"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;move&quot;, 10, 0)"><span class="fa fa-arrow-right"></span></span></button>
+                            <button class="btn btn-outline-secondary" type="button" data-method="move" data-option="0" data-second-option="-10" title="Move Up"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;move&quot;, 0, -10)"><span class="fa fa-arrow-up"></span></span></button>
+                            <button class="btn btn-outline-secondary" type="button" data-method="move" data-option="0" data-second-option="10" title="Move Down"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;move&quot;, 0, 10)"><span class="fa fa-arrow-down"></span></span></button>
+                          </div>
+                          <div class="btn-group">
+                            <button class="btn btn-outline-success" type="button" data-method="rotate" data-option="-45" title="Rotate Left"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;rotate&quot;, -45)"><span class="fa fa-rotate-left"></span></span></button>
+                            <button class="btn btn-outline-success" type="button" data-method="rotate" data-option="45" title="Rotate Right"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;rotate&quot;, 45)"><span class="fa fa-rotate-right"></span></span></button>
+                          </div>
+                          <div class="btn-group">
+                            <button class="btn btn-outline-info" type="button" data-method="scaleX" data-option="-1" title="Flip Horizontal"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;scaleX&quot;, -1)"><span class="fa fa-arrows-h"></span></span></button>
+                            <button class="btn btn-outline-info" type="button" data-method="scaleY" data-option="-1" title="Flip Vertical"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;scaleY&quot;, -1)"><span class="fa fa-arrows-v"></span></span></button>
+                          </div>
+                          <div class="btn-group">
+                            <button class="btn btn-outline-warning" type="button" data-method="crop" title="Crop"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;crop&quot;)"><span class="fa fa-check"></span></span></button>
+                            <button class="btn btn-outline-warning" type="button" data-method="clear" title="Clear"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;clear&quot;)"><span class="fa fa-remove"></span></span></button>
+                          </div>
+                          <div class="btn-group">
+                            <button class="btn btn-outline-danger" type="button" data-method="disable" title="Disable"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;disable&quot;)"><span class="fa fa-lock"></span></span></button>
+                            <button class="btn btn-outline-danger" type="button" data-method="enable" title="Enable"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;enable&quot;)"><span class="fa fa-unlock"></span></span></button>
+                          </div>
+                          <div class="btn-group">
+                            <button class="btn btn-outline-dark" type="button" data-method="reset" title="Reset"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;reset&quot;)"><span class="fa fa-refresh"></span></span></button>
+                            <label class="btn btn-outline-dark btn-upload" for="inputImage" title="Upload image file">
+                              <input class="sr-only" id="inputImage" type="file" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff"><span class="docs-tooltip" ><span class="fa fa-upload"></span></span>
+                            </label>
+
+
+                            
+
+
+                            <button class="btn btn-outline-dark" type="button" data-method="destroy" title="Destroy"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;destroy&quot;)"><span class="fa fa-power-off"></span></span></button>
+                          </div><br>
+                          <!-- Show the cropped image in modal-->
+                          <div class="modal fade docs-cropped" id="getCroppedCanvasModal" aria-hidden="true" aria-labelledby="getCroppedCanvasTitle" role="dialog" tabindex="-1">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="getCroppedCanvasTitle">Kırpıldı</h5>
+                                  <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                </div>
+                                <div class="modal-body"></div>
+                                <div class="modal-footer">
+                                  <button class="btn btn-primary" type="button" data-dismiss="modal">Close</button><a class="btn btn-outline-primary" id="download" href="javascript:void(0);" download="cropped.jpg">Download</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- /.modal-->
+                          <button class="btn btn-outline-danger" type="button" data-method="moveTo" data-option="0"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="cropper.moveTo(0)">Taşı [0,0]</span></button>
+                          <button class="btn btn-outline-info" type="button" data-method="zoomTo" data-option="1"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="cropper.zoomTo(1)">Yaklaştır 100%</span></button>
+                          <button class="btn btn-outline-success" type="button" data-method="rotateTo" data-option="180"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="cropper.rotateTo(180)">Döndür 180°</span></button>
+                          <button class="btn btn-outline-warning" type="button" data-method="scale" data-option="-2" data-second-option="-1"><span class="docs-tooltip" data-bs-toggle="tooltip" title="cropper.scale(-2, -1)">Boyut (-2, -1)</span></button>
+                          <button class="btn btn-outline-danger" type="button"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="cropper.moveTo(0)">Blurla</span></button>
+                          <button class="btn btn-outline-info" type="button"  data-option="1"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="cropper.zoomTo(1)">İyileştir</span></button>
+
+                        </div>
+
+                
+
+                        <!-- /.docs-buttons-->
+                        <div class="col-xl-3 col-md-12 docs-toggles box-col-12">
+                          <div class="btn-group d-flex flex-nowrap" data-bs-toggle="buttons">
+                            <label class="btn btn-info active">
+                              <input class="sr-only" id="aspectRatio0" type="radio" name="aspectRatio" value="1.7777777777777777"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="aspectRatio: 16 / 9">16:9</span>
+                            </label>
+                            <label class="btn btn-outline-info">
+                              <input class="sr-only" id="aspectRatio1" type="radio" name="aspectRatio" value="1.3333333333333333"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="aspectRatio: 4 / 3">4:3</span>
+                            </label>
+                            <label class="btn btn-outline-info">
+                              <input class="sr-only" id="aspectRatio2" type="radio" name="aspectRatio" value="1"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="aspectRatio: 1 / 1">1:1</span>
+                            </label>
+                            <label class="btn btn-outline-info">
+                              <input class="sr-only" id="aspectRatio3" type="radio" name="aspectRatio" value="0.6666666666666666"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="aspectRatio: 2 / 3">2:3</span>
+                            </label>
+                            <label class="btn btn-outline-info">
+                              <input class="sr-only" id="aspectRatio4" type="radio" name="aspectRatio" value="NaN"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="aspectRatio: NaN">Serbest</span>
+                            </label>
+                          </div>
+                          <div class="btn-group d-flex flex-nowrap" data-bs-toggle="buttons">
+                            <label class="btn btn-warning active">
+                              <input class="sr-only" id="viewMode0" type="radio" name="viewMode" value="0" checked=""><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="View Mode 0">VM0</span>
+                            </label>
+                            <label class="btn btn-outline-warning">
+                              <input class="sr-only" id="viewMode1" type="radio" name="viewMode" value="1"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="View Mode 1">VM1</span>
+                            </label>
+                            <label class="btn btn-outline-warning">
+                              <input class="sr-only" id="viewMode2" type="radio" name="viewMode" value="2"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="View Mode 2">VM2</span>
+                            </label>
+                            <label class="btn btn-outline-warning">
+                              <input class="sr-only" id="viewMode3" type="radio" name="viewMode" value="3"><span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="View Mode 3">VM3</span>
+                            </label>
+                          </div>
+                       
+                          
+                     
+                     
+                   </div>
+               
+
+<script>// Dosya yükleme işlemi tamamlandığında tetiklenen event listener
+  document.getElementById('inputImage').addEventListener('change', (event) => {
+      const imageInput = event.target;
+      const resultContainer = document.querySelector('.result-container');
+      const resultImage = document.getElementById('resultImage');
+      const errorContainer = document.getElementById('errorContainer');
+  
+      if (imageInput.files.length > 0) {
+          const selectedImage = imageInput.files[0];
+          
+          const imageUrl = URL.createObjectURL(selectedImage);
+          resultImage.src = imageUrl;
+          resultContainer.style.display = 'block';
+  
+      }
+  });
+  
+  
+  document.getElementById('uploadButton').addEventListener('click', async () => {
+      const imageInput = document.getElementById('resultImage');
+      if (imageInput.files.length === 0) {
+          alert('Lütfen bir dosya seçin.');
+          return;
+      }
+  
+      const data = new FormData();
+      data.append('image', imageInput.files[0]);
+  
+      const options = {
+          method: 'POST',
+          headers: {
+              'X-RapidAPI-Key': 'd911d19819msh2739a40f00946dap185df6jsn00e173af1619',
+              'X-RapidAPI-Host': 'face-and-plate-blurer.p.rapidapi.com'
+          },
+          body: data
+      };
+  
+      try {
+          const response = await fetch('https://face-and-plate-blurer.p.rapidapi.com/img-anonymization/v1/results', options);
+          if (!response.ok) {
+              throw new Error('API isteği başarısız oldu: ' + response.statusText);
+          }
+          const result = await response.json();
+          console.log(result);
+  
+          if (result.results && result.results.length > 0) {
+              const entities = result.results[0].entities;
+              if (entities && entities.length > 0) {
+                  const processedImage = entities.find(entity => entity.kind === 'image');
+                  if (processedImage && processedImage.image) {
+                      const resultImage = document.getElementById('resultImage');
+                      const downloadButton = document.getElementById('downloadButton');
+  
+                      resultImage.src = 'data:image/png;base64,' + processedImage.image;
+                      downloadButton.href = 'data:image/png;base64,' + processedImage.image;
+                      downloadButton.style.display = 'block';
+                  } else {
+                      throw new Error('İşlenmiş görsel bulunamadı.');
+                  }
+              } else {
+                  throw new Error('Görsel öğeleri bulunamadı.');
+              }
+          } else {
+              throw new Error('Sonuç bulunamadı.');
+          }
+      } catch (error) {
+          console.error(error);
+          displayError('Bir hata oluştu: ' + error.message);
+          //alert('Bir hata oluştu: ' + error.message);
+      }
+  });
+  
+  
+  async function enhanceImage() {
+      const resultImage = document.getElementById('resultImage');
+      
+window.alert("test");
+
+      if (!resultImage.src) {
+          alert('Lütfen önce bir görsel yükleyin ve blurla butonuna basın.');
+          return;
+      }
+  
+      const imageBlob = await fetch(resultImage.src).then(res => res.blob());
+  
+      const url = 'https://ai-picture-upscaler.p.rapidapi.com/supersize-image';
+      const data = new FormData();
+      data.append('image', imageBlob);
+      data.append('sizeFactor', '4');
+      data.append('imageStyle', 'realistic');
+      data.append('noiseCancellationFactor', '0');
+  
+      const options = {
+          method: 'POST',
+          headers: {
+              'X-RapidAPI-Key': 'd911d19819msh2739a40f00946dap185df6jsn00e173af1619',
+              'X-RapidAPI-Host': 'ai-picture-upscaler.p.rapidapi.com'
+          },
+          body: data
+      };
+  
+      try {
+          const response = await fetch(url, options);
+          
+          if (!response.ok) {
+              throw new Error('API isteği başarısız oldu: ' + response.statusText);
+          }
+  
+          const enhancedImageBlob = await response.blob();
+          const enhancedImageUrl = URL.createObjectURL(enhancedImageBlob);
+  
+          resultImage.src = enhancedImageUrl;
+  
+          const downloadButton = document.getElementById('downloadButton');
+          downloadButton.href = enhancedImageUrl;
+          downloadButton.style.display = 'block';
+          
+  
+  
+  
+      } catch (error) {
+          console.error(error);
+          //alert('Bir hata oluştu: ' + error.message);
+          displayError('Bir hata oluştu: ' + error.message);
+  
+      }
+  }
+  
+
+  
+  document.getElementById('enhanceButton').addEventListener('click', enhanceImage);
+   </script>
+
+
+
+
+
+
+
+
+
+                            <ul class="dropdown-menu" aria-labelledby="toggleOptions" role="menu">
+                              <li class="dropdown-item">
+                                <div class="form-check">
+                                  <input class="form-check-input" id="responsive" type="checkbox" name="responsive" checked="">
+                                  <label class="form-check-label" for="responsive">responsive</label>
+                                </div>
+                              </li>
+                              <li class="dropdown-item">
+                                <div class="form-check">
+                                  <input class="form-check-input" id="restore" type="checkbox" name="restore" checked="">
+                                  <label class="form-check-label" for="restore">restore</label>
+                                </div>
+                              </li>
+                              <li class="dropdown-item">
+                                <div class="form-check">
+                                  <input class="form-check-input" id="checkCrossOrigin" type="checkbox" name="checkCrossOrigin" checked="">
+                                  <label class="form-check-label" for="checkCrossOrigin">checkCrossOrigin</label>
+                                </div>
+                              </li>
+                              <li class="dropdown-item">
+                                <div class="form-check">
+                                  <input class="form-check-input" id="checkOrientation" type="checkbox" name="checkOrientation" checked="">
+                                  <label class="form-check-label" for="checkOrientation">checkOrientation</label>
+                                </div>
+                              </li>
+                              <li class="dropdown-item">
+                                <div class="form-check">
+                                  <input class="form-check-input" id="modal" type="checkbox" name="modal" checked="">
+                                  <label class="form-check-label" for="modal">modal</label>
+                                </div>
+                              </li>
+                              <li class="dropdown-item">
+                                <div class="form-check">
+                                  <input class="form-check-input" id="guides" type="checkbox" name="guides" checked="">
+                                  <label class="form-check-label" for="guides">guides</label>
+                                </div>
+                              </li>
+                              <li class="dropdown-item">
+                                <div class="form-check">
+                                  <input class="form-check-input" id="center" type="checkbox" name="center" checked="">
+                                  <label class="form-check-label" for="center">center</label>
+                                </div>
+                              </li>
+                              <li class="dropdown-item">
+                                <div class="form-check">
+                                  <input class="form-check-input" id="highlight" type="checkbox" name="highlight" checked="">
+                                  <label class="form-check-label" for="highlight">highlight</label>
+                                </div>
+                              </li>
+                              <li class="dropdown-item">
+                                <div class="form-check">
+                                  <input class="form-check-input" id="background" type="checkbox" name="background" checked="">
+                                  <label class="form-check-label" for="background">background</label>
+                                </div>
+                              </li>
+                              <li class="dropdown-item">
+                                <div class="form-check">
+                                  <input class="form-check-input" id="autoCrop" type="checkbox" name="autoCrop" checked="">
+                                  <label class="form-check-label" for="autoCrop">autoCrop</label>
+                                </div>
+                              </li>
+                              <li class="dropdown-item">
+                                <div class="form-check">
+                                  <input class="form-check-input" id="movable" type="checkbox" name="movable" checked="">
+                                  <label class="form-check-label" for="movable">movable</label>
+                                </div>
+                              </li>
+                              <li class="dropdown-item">
+                                <div class="form-check">
+                                  <input class="form-check-input" id="rotatable" type="checkbox" name="rotatable" checked="">
+                                  <label class="form-check-label" for="rotatable">rotatable</label>
+                                </div>
+                              </li>
+                              <li class="dropdown-item">
+                                <div class="form-check">
+                                  <input class="form-check-input" id="scalable" type="checkbox" name="scalable" checked="">
+                                  <label class="form-check-label" for="scalable">scalable</label>
+                                </div>
+                              </li>
+                              <li class="dropdown-item">
+                                <div class="form-check">
+                                  <input class="form-check-input" id="zoomable" type="checkbox" name="zoomable" checked="">
+                                  <label class="form-check-label" for="zoomable">zoomable</label>
+                                </div>
+                              </li>
+                              <li class="dropdown-item">
+                                <div class="form-check">
+                                  <input class="form-check-input" id="zoomOnTouch" type="checkbox" name="zoomOnTouch" checked="">
+                                  <label class="form-check-label" for="zoomOnTouch">zoomOnTouch</label>
+                                </div>
+                              </li>
+                              <li class="dropdown-item">
+                                <div class="form-check">
+                                  <input class="form-check-input" id="zoomOnWheel" type="checkbox" name="zoomOnWheel" checked="">
+                                  <label class="form-check-label" for="zoomOnWheel">zoomOnWheel</label>
+                                </div>
+                              </li>
+                              <li class="dropdown-item">
+                                <div class="form-check">
+                                  <input class="form-check-input" id="cropBoxMovable" type="checkbox" name="cropBoxMovable" checked="">
+                                  <label class="form-check-label" for="cropBoxMovable">cropBoxMovable</label>
+                                </div>
+                              </li>
+                              <li class="dropdown-item">
+                                <div class="form-check">
+                                  <input class="form-check-input" id="cropBoxResizable" type="checkbox" name="cropBoxResizable" checked="">
+                                  <label class="form-check-label" for="cropBoxResizable">cropBoxResizable</label>
+                                </div>
+                              </li>
+                              <li class="dropdown-item">
+                                <div class="form-check">
+                                  <input class="form-check-input" id="toggleDragModeOnDblclick" type="checkbox" name="toggleDragModeOnDblclick" checked="">
+                                  <label class="form-check-label" for="toggleDragModeOnDblclick">toggleDragModeOnDblclick</label>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+           
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Container-fluid Ends-->
+        </div>
+        <!-- footer start-->
+        <footer class="footer">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12 footer-copyright text-center">
+                <p class="mb-0">Copyright 2024 © NewsOP  by PushUP  </p>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!-- latest jquery-->
+    <script src="../assets/js/jquery.min.js"></script>
+    <!-- Bootstrap js-->
+    <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- feather icon js-->
+    <script src="../assets/js/icons/feather-icon/feather.min.js"></script>
+    <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
+    <!-- scrollbar js-->
+    <script src="../assets/js/scrollbar/simplebar.js"></script>
+    <script src="../assets/js/scrollbar/custom.js"></script>
+    <!-- Sidebar jquery-->
+    <script src="../assets/js/config.js"></script>
+    <!-- Plugins JS start-->
+    <script src="../assets/js/sidebar-menu.js"></script>
+    <script src="../assets/js/sidebar-pin.js"></script>
+    <script src="../assets/js/slick/slick.min.js"></script>
+    <script src="../assets/js/slick/slick.js"></script>
+    <script src="../assets/js/header-slick.js"></script>
+    <script src="../assets/js/image-cropper/cropper.js"></script>
+    <script src="../assets/js/image-cropper/cropper-main.js"></script>
+    <script src="../assets/js/height-equal.js"></script>
+    <!-- Plugins JS Ends-->
+    <!-- Theme js-->
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>
